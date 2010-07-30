@@ -62,6 +62,9 @@ map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 map <C-B> :BufExplorer<CR>
 imap <C-B> <ESC>:BufExplorer<CR>
+vmap > >gv
+vmap < <gv
+
 
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
@@ -79,5 +82,4 @@ imap <C-B> <ESC>:BufExplorer<CR>
 
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
-
-
+autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim 
