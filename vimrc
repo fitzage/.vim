@@ -60,6 +60,7 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
+map <F2> :NERDTreeToggle<CR>
 map <C-B> :BufExplorer<CR>
 imap <C-B> <ESC>:BufExplorer<CR>
 vmap > >gv
