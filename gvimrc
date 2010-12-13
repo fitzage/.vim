@@ -10,4 +10,3 @@ set lines=80 columns=200          " Window dimensions.
 colorscheme twilight
 set guioptions-=r                 " Don't show right scrollbar
 
-map <F2> :NERDTreeToggle<CR>
