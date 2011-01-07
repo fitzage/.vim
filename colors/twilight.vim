@@ -20,7 +20,7 @@ hi IncSearch      guifg=#000000           guibg=#CF6A4C
 hi LineNr         guifg=#7587A6           guibg=#000000
 hi ModeMsg        guifg=#CF7D34           guibg=#E9C062
 hi MoreMsg        guifg=#CF7D34           guibg=#E9C062
-hi NonText        guifg=#D2A8A1           guibg=#141414
+hi NonText        guifg=#4e4e4e           guibg=#141414
 hi Question       guifg=#7587A6           guibg=#0E2231
 hi Search         guifg=#420E09           guibg=#CF6A4C
 hi SpecialKey     guifg=#CF7D34           guibg=#141414
