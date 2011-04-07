@@ -10,3 +10,4 @@ set lines=80 columns=200          " Window dimensions.
 colorscheme pyte
 set guioptions-=r                 " Don't show right scrollbar
 
+set directory=~/.vimswap
