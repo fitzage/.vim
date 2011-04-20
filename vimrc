@@ -11,6 +11,7 @@ runtime macros/matchit.vim        " Load the matchit plugin.
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
+set spell                         " Enable spell check
 
 set backspace=indent,eol,start    " Intuitive backspacing.
 
