@@ -4,7 +4,7 @@
 set nocompatible                  " Must come first because it changes other options.
 silent! call pathogen#runtime_append_all_bundles()
 
-syntax enable                     " Turn on syntax highlighting.
+
 filetype plugin indent on         " Turn on file type detection.
 
 runtime macros/matchit.vim        " Load the matchit plugin.
@@ -49,7 +49,10 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-colorscheme emacs
+syntax enable
+set background=light
+colorscheme solarized
+
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
