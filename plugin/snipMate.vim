@@ -1,11 +1,6 @@
 " File:          snipMate.vim
 " Author:        Michael Sanders
-<<<<<<< Updated upstream
-" Last Updated:  July 13, 2009
-" Version:       0.83
-=======
 " Version:       0.84
->>>>>>> Stashed changes
 " Description:   snipMate.vim implements some of TextMate's snippets features in
 "                Vim. A snippet is a piece of often-typed text that you can
 "                insert into your document using a trigger word followed by a "<tab>".
@@ -96,12 +91,6 @@ fun! ExtractSnipsFile(file, ft)
 	endfor
 endf
 
-<<<<<<< Updated upstream
-fun! ResetSnippets()
-	let s:snippets = {} | let s:multi_snips = {} | let g:did_ft = {}
-endf
-
-=======
 " Reset snippets for filetype.
 fun! ResetSnippets(ft)
 	let ft = a:ft == '' ? '_' : a:ft
@@ -131,7 +120,6 @@ fun! ReloadAllSnippets()
 	endfor
 endf
 
->>>>>>> Stashed changes
 let g:did_ft = {}
 fun! GetSnippets(dir, filetypes)
 	for ft in split(a:filetypes, '\.')
@@ -184,11 +172,7 @@ fun! TriggerSnippet()
 		" the snippet.
 		if snippet != ''
 			let col = col('.') - len(trigger)
-<<<<<<< Updated upstream
-			sil exe 's/\V'.escape(trigger, '/.').'\%#//'
-=======
 			sil exe 's/\V'.escape(trigger, '/\.').'\%#//'
->>>>>>> Stashed changes
 			return snipMate#expandSnip(snippet, col)
 		endif
 	endfor
