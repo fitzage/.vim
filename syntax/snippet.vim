@@ -3,7 +3,11 @@
 syn match snipComment '^#.*'
 syn match placeHolder '\${\d\+\(:.\{-}\)\=}' contains=snipCommand
 syn match tabStop '\$\d\+'
+<<<<<<< Updated upstream
 syn match snipCommand '`.\{-}`'
+=======
+syn match snipCommand '[^\\]`.\{-}`'
+>>>>>>> Stashed changes
 syn match snippet '^snippet.*' transparent contains=multiSnipText,snipKeyword
 syn match multiSnipText '\S\+ \zs.*' contained
 syn match snipKeyword '^snippet'me=s+8 contained
