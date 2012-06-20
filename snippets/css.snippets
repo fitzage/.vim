@@ -2,3 +2,32 @@ snippet rad
 	-webkit-border-radius: ${1:}px;
 	-moz-border-radius: $1px;
 	border-radius: $1px;
+
+snippet bord
+	border: 1px solid #${1};
+
+snippet back
+	background: url(/${1}) ${2:no-repeat} ${3:left} ${4:top};
+
+snippet pad
+	padding: ${1}px ${2}px ${3}px ${4}px;
+
+snippet marg
+	margin: ${1}px ${2}px ${3}px ${4}px;
+
+snippet trans
+	-webkit-transition: ${1:background} ${2:0.15}s ${3:linear};
+	-moz-transition: $1 $2s $3;
+	-o-transition: $1 $2s $3;
+
+snippet grad
+	background-color: #$1;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#${1:}), to(#${2:})); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #$1, #$2); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #$1, #$2); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #$1, #$2); /* IE10 */
+	background-image:      -o-linear-gradient(top, #$1, #$2); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #$1, #$2);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#$1', EndColorStr='#$2'); /* IE6–IE9 */
+
+
