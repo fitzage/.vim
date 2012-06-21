@@ -79,6 +79,12 @@ nnoremap <F1> <ESC>
 vmap > >gv
 vmap < <gv
 
+nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader><Left> <C-w>h
+nnoremap <leader><Down> <C-w>k
+nnoremap <leader><Up> <C-w>j
+nnoremap <leader><Right> <C-w>l
+
 
 " Uncomment to use Jamis Buck's file opening plugin
 " map <Leader>t :FuzzyFinderTextMate<Enter>
