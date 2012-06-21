@@ -9,7 +9,7 @@ set background=light              " Background.
 set lines=80 columns=200          " Window dimensions.
 
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 set guioptions-=r                 " Don't show right scrollbar
