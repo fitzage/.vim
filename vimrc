@@ -67,7 +67,7 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
-map <F2> :NERDTreeToggle<CR>
+map <leader>2 :NERDTreeToggle<CR>
 map <leader>sh :set syntax=html<cr>
 map <leader>rs :%s/\.  /. /g<cr>
 nnoremap <leader><space> :noh<cr>
