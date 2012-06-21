@@ -22,6 +22,7 @@ set wildmode=list:longest         " Complete files like a shell.
 
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
+set gdefault                      " Automatically default to global replace
 
 set number                        " Show line numbers.
 set ruler                         " Show cursor position.
@@ -46,6 +47,8 @@ set shiftwidth=4                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
 
 set laststatus=2                  " Show the status line all the time
+let mapleader = ','
+
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
@@ -65,19 +68,23 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 map <F2> :NERDTreeToggle<CR>
-" map <C-B> :BufExplorer<CR>
 map <leader>sh :set syntax=html<cr>
 map <leader>rs :%s/\.  /. /g<cr>
-" imap <C-B> <ESC>:BufExplorer<CR>
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+inoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+nnoremap <F1> <ESC>
 vmap > >gv
 vmap < <gv
 
 
 " Uncomment to use Jamis Buck's file opening plugin
-"map <Leader>t :FuzzyFinderTextMate<Enter>
+" map <Leader>t :FuzzyFinderTextMate<Enter>
 
 " Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
+nnoremap ; :
 "nnoremap : ;
 
 "vnoremap ; :
