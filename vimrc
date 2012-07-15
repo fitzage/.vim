@@ -84,12 +84,6 @@ nnoremap <leader><Left> <C-w>h
 nnoremap <leader><Down> <C-w>k
 nnoremap <leader><Up> <C-w>j
 nnoremap <leader><Right> <C-w>l
-au BufWritePre * $put _ | $;?\(^\s*$\)\@!?+1,$d
-autocmd BufWritePre * :call <SID>StripWhite()
-fun! <SID>StripWhite()
-        %s/[ \t]\+$//ge
-        %s!^\( \+\)\t!\=StrRepeat("\t", 1 + strlen(submatch(1)) / 8)!ge
-endfun
 
 " Uncomment to use Jamis Buck's file opening plugin
 " map <Leader>t :FuzzyFinderTextMate<Enter>
