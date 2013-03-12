@@ -30,7 +30,7 @@ set ruler                         " Show cursor position.
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
-set nowrap                          " Turn on line wrapping.
+set wrap                          " Turn on line wrapping.
 set scrolloff=5                   " Show 3 lines of context around the cursor.
 
 set title                         " Set the terminal's title
