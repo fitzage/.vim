@@ -79,6 +79,8 @@ nnoremap <F1> <ESC>
 vmap > >gv
 vmap < <gv
 
+map <leader>w :set nowrap! <CR>
+
 nnoremap <leader>W <C-w>v<C-w>l
 nnoremap <leader><Left> <C-w>h
 nnoremap <leader><Down> <C-w>k
