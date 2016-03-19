@@ -15,3 +15,11 @@ colorscheme solarized
 set guioptions-=r                 " Don't show right scrollbar
 
 set directory=~/.vimswap
+
+let NERDTreeMapOpenInTab='<ENTER>'
+
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+
