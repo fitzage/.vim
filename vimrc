@@ -71,6 +71,7 @@ map <leader>. :NERDTreeToggle<CR>
 map <leader>p :CtrlP<CR>
 map <leader>sh :set syntax=html<cr>
 map <leader>rs :%s/\.  /. /g<cr>
+map <leader>n :bnext<cr>
 nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
