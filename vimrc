@@ -52,10 +52,6 @@ let mapleader = ','
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-syntax enable
-set background=dark
-colorscheme solarized
-
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -106,3 +102,7 @@ nnoremap ; :
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
+
+syntax enable
+colorscheme cobalt2
+hi Normal guibg=NONE ctermbg=NONE
