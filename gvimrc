@@ -6,7 +6,7 @@ set antialias                     " MacVim: smooth fonts.
 set encoding=utf-8                " Use UTF-8 everywhere.
 set guioptions-=T                 " Hide toolbar.
 set background=light              " Background.
-set lines=80 columns=200          " Window dimensions.
+set lines=80 columns=165          " Window dimensions.
 
 syntax enable
 set background=dark
@@ -23,3 +23,4 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
+:anoremenu icon=NSTouchBarSidebarTemplate TouchBar.ShowSidebar :Lexplore<CR>

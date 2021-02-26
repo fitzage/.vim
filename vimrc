@@ -4,7 +4,7 @@
 set nocompatible                  " Must come first because it changes other options.
 silent! call pathogen#runtime_append_all_bundles()
 
-filetype off
+syntax on
 filetype plugin indent on         " Turn on file type detection.
 
 runtime macros/matchit.vim        " Load the matchit plugin.
@@ -43,6 +43,7 @@ set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 " UNCOMMENT TO USE
 set tabstop=2                    " Global tab width.
+set softtabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
 
@@ -65,6 +66,8 @@ map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 map <leader>. :NERDTreeToggle<CR>
 map <leader>p :CtrlP<CR>
+map <D-p> :CtrlP<CR>
+:aunmenu File.Print
 map <leader>sh :set syntax=html<cr>
 map <leader>rs :%s/\.  /. /g<cr>
 map <leader>n :bnext<cr>
