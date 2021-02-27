@@ -24,3 +24,4 @@ let g:ctrlp_prompt_mappings = {
     \ }
 
 :anoremenu icon=NSTouchBarSidebarTemplate TouchBar.ShowSidebar :Lexplore<CR>
+highlight htmlArg cterm=italic gui=italic

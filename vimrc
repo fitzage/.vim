@@ -104,8 +104,10 @@ nnoremap ; :
 
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
-autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
 
 syntax enable
 colorscheme cobalt2
 hi Normal guibg=NONE ctermbg=NONE
+
+highlight Comment cterm=italic gui=italic
+highlight htmlArg cterm=italic gui=italic
