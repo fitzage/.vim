@@ -2,7 +2,6 @@ let SessionLoad = 1
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
-inoremap <C-_> =GetCloseTag()
 inoremap <D-BS> 
 inoremap <M-BS> 
 inoremap <M-Down> }
@@ -23,7 +22,6 @@ inoremap <F1> 
 vnoremap 	 %
 nnoremap 	 %
 map  <Plug>(ctrlp)
-map  a
 omap <silent> % <Plug>(MatchitOperationForward)
 xmap <silent> % <Plug>(MatchitVisualForward)
 nmap <silent> % <Plug>(MatchitNormalForward)
@@ -140,7 +138,6 @@ nmap ySs <Plug>YSsurround
 nmap yss <Plug>Yssurround
 nmap yS <Plug>YSurround
 nmap ys <Plug>Ysurround
-map <C-_> a
 noremap <M-Down> }
 noremap <D-Down> <C-End>
 noremap <M-Up> {
@@ -199,6 +196,7 @@ xnoremap <silent> <Plug>NERDCommenterComment :call NERDComment("x", "Comment")
 nnoremap <silent> <Plug>NERDCommenterComment :call NERDComment("n", "Comment")
 nnoremap <F1> 
 vnoremap <F1> 
+map <D-p> :CtrlP
 xmap <silent> <Plug>(MatchitVisualTextObject) <Plug>(MatchitVisualMultiBackward)o<Plug>(MatchitVisualMultiForward)
 onoremap <silent> <Plug>(MatchitOperationMultiForward) :call matchit#MultiMatch("W",  "o")
 onoremap <silent> <Plug>(MatchitOperationMultiBackward) :call matchit#MultiMatch("bW", "o")
@@ -217,7 +215,6 @@ imap s <Plug>Isurround
 imap  <Plug>DiscretionaryEnd
 imap  <Plug>Isurround
 imap  <Plug>AlwaysEnd
-inoremap  =GetCloseTag()
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set background=dark
@@ -266,7 +263,6 @@ set runtimepath+=/Applications/MacVim.app/Contents/Resources/vim/runtime
 set runtimepath+=/Applications/MacVim.app/Contents/Resources/vim/runtime/pack/dist/opt/matchit
 set runtimepath+=/Applications/MacVim.app/Contents/Resources/vim/vimfiles/after
 set runtimepath+=~/.vim/after
-set runtimepath+=~/.vim/ftplugin/html
 set scrolloff=5
 set shiftwidth=2
 set showcmd
@@ -292,13 +288,12 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
+$argadd src
 set stal=2
 tabnew
 tabnew
-tabnew
-tabnew
 tabrewind
-edit src/html/volunteer-home.html
+edit src/scss/besa/_elements.scss
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -308,7 +303,156 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt src/html/volunteer-home.html
+balt src/scss/besa/_controls.scss
+let s:cpo_save=&cpo
+set cpo&vim
+cnoremap <buffer> <expr> <C-R><C-G> fugitive#buffer().rev()
+cnoremap <buffer> <expr>  fugitive#buffer().rev()
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal noautoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=s1:/*,mb:*,ex:*/,://
+setlocal commentstring=//\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal cursorlineopt=both
+setlocal define=^\\C\\v\\s*%(\\@function|\\@mixin|\\=)|^\\s*%(\\$[[:alnum:]-]+:|[%.][:alnum:]-]+\\s*%(\\{|$))@=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'scss'
+setlocal filetype=scss
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=^\\s*@import\\s\\+\\%(url(\\)\\=[\"']\\=
+setlocal includeexpr=SassIncludeExpr(v:fname)
+setlocal indentexpr=GetCSSIndent()
+setlocal indentkeys=0{,0},!^F,o,O
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal nomacmeta
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=csscomplete#CompleteCSS
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal nosmartindent
+setlocal softtabstop=2
+set spell
+setlocal spell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal spelloptions=
+setlocal statusline=
+setlocal suffixesadd=.sass,.scss,.css
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'scss'
+setlocal syntax=scss
+endif
+setlocal tabstop=2
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 30) / 60)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+tabnext
+edit src/html/volunteer-profile.html
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
 let s:cpo_save=&cpo
 set cpo&vim
 cnoremap <buffer> <expr> <C-R><C-G> fugitive#buffer().rev()
@@ -430,341 +574,13 @@ setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal scrolloff=-1
-setlocal shiftwidth=4
-setlocal noshortname
-setlocal showbreak=
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=2
-set spell
-setlocal spell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal spelloptions=
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'html'
-setlocal syntax=html
-endif
-setlocal tabstop=2
-setlocal tagcase=
-setlocal tagfunc=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal wincolor=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 43 - ((16 * winheight(0) + 30) / 60)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 43
-normal! 033|
-tabnext
-edit src/html/modules/goal-meter.html
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-argglobal
-balt src/html/volunteer-home.html
-let s:cpo_save=&cpo
-set cpo&vim
-cnoremap <buffer> <expr> <C-R><C-G> fugitive#buffer().rev()
-imap <buffer> <C-V>& <Plug>ragtagXmlV
-imap <buffer> <C-V>% <Plug>ragtagUrlV
-imap <buffer> <C-X>& <Plug>ragtagXmlEncode
-imap <buffer> <C-X>% <Plug>ragtagUrlEncode
-inoremap <buffer> <C-X>" <NL>I<!-- A -->F<NL>s
-inoremap <buffer> <C-X>' <!--  -->3hi
-imap <buffer> <C-X>_ <NL>I< A >F<NL>s
-imap <buffer> <C-X>- <  >2hi
-imap <buffer> <C-X>] <script type="text/javascript"></script>O
-inoremap <buffer> <C-X>> %>
-inoremap <buffer> <C-X>< <%
-imap <buffer> <SNR>22_ragtagOclose  ><Left><Left>
-inoremap <buffer> <SNR>22_ragtagOopen <%= 
-imap <buffer> <C-X><C-_> /
-inoremap <buffer> <SNR>22_xhtmltrans <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-inoremap <buffer> <SNR>22_htmltrans <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-cnoremap <buffer> <expr>  fugitive#buffer().rev()
-imap <buffer> & <Plug>ragtagXmlV
-imap <buffer> % <Plug>ragtagUrlV
-imap <buffer> & <Plug>ragtagXmlEncode
-imap <buffer> % <Plug>ragtagUrlEncode
-inoremap <buffer> " <NL>I<!-- A -->F<NL>s
-inoremap <buffer> ' <!--  -->3hi
-imap <buffer> _ <NL>I< A >F<NL>s
-imap <buffer> - <  >2hi
-imap <buffer> ] <script type="text/javascript"></script>O
-inoremap <buffer> > %>
-inoremap <buffer> < <%
-imap <buffer>  /
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
-setlocal noautoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s:<!--,m:\ \ \ \ ,e:-->
-setlocal commentstring=<!--%s-->
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal cursorlineopt=both
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'html'
-setlocal filetype=html
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=HtmlIndent()
-setlocal indentkeys=o,O,<Return>,<>>,{,},!^F
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal nomacmeta
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:],<:>
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=htmlcomplete#CompleteTags
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=-1
-setlocal shiftwidth=4
-setlocal noshortname
-setlocal showbreak=
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=2
-set spell
-setlocal spell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal spelloptions=
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'html'
-setlocal syntax=html
-endif
-setlocal tabstop=4
-setlocal tagcase=
-setlocal tagfunc=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal wincolor=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 11 - ((10 * winheight(0) + 30) / 60)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 11
-normal! 0
-tabnext
-edit src/scss/besa/_elements.scss
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-argglobal
-balt src/html/modules/available-event.html
-let s:cpo_save=&cpo
-set cpo&vim
-cnoremap <buffer> <expr> <C-R><C-G> fugitive#buffer().rev()
-cnoremap <buffer> <expr>  fugitive#buffer().rev()
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
-setlocal noautoindent
-setlocal backupcopy=
-setlocal balloonexpr=netrw#BalloonHelp()
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://
-setlocal commentstring=//\ %s
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal cursorlineopt=both
-setlocal define=^\\C\\v\\s*%(\\@function|\\@mixin|\\=)|^\\s*%(\\$[[:alnum:]-]+:|[%.][:alnum:]-]+\\s*%(\\{|$))@=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'scss'
-setlocal filetype=scss
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=^\\s*@import\\s\\+\\%(url(\\)\\=[\"']\\=
-setlocal includeexpr=SassIncludeExpr(v:fname)
-setlocal indentexpr=GetCSSIndent()
-setlocal indentkeys=0{,0},!^F,o,O
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal nomacmeta
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=csscomplete#CompleteCSS
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=-1
 setlocal shiftwidth=2
 setlocal noshortname
 setlocal showbreak=
 setlocal sidescrolloff=-1
 setlocal signcolumn=auto
 setlocal nosmartindent
-setlocal softtabstop=0
+setlocal softtabstop=2
 set spell
 setlocal spell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
@@ -772,11 +588,11 @@ setlocal spellfile=
 setlocal spelllang=en
 setlocal spelloptions=
 setlocal statusline=
-setlocal suffixesadd=.sass,.scss,.css
+setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'scss'
-setlocal syntax=scss
+if &syntax != 'html'
+setlocal syntax=html
 endif
 setlocal tabstop=2
 setlocal tagcase=
@@ -797,12 +613,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 247 - ((43 * winheight(0) + 30) / 60)
+let s:l = 46 - ((27 * winheight(0) + 30) / 60)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 247
-normal! 018|
+keepjumps 46
+normal! 030|
 tabnext
 edit src/scss/besa/_community.scss
 set splitbelow splitright
@@ -814,7 +630,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt src/scss/besa/_elements.scss
+balt src/scss/besa/_community.scss
 let s:cpo_save=&cpo
 set cpo&vim
 cnoremap <buffer> <expr> <C-R><C-G> fugitive#buffer().rev()
@@ -947,173 +763,18 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 103 - ((35 * winheight(0) + 30) / 60)
+let s:l = 129 - ((48 * winheight(0) + 30) / 60)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 103
-normal! 025|
-tabnext
-edit src/html/attendees.json
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-argglobal
-balt src/html/modules/attendee-loop.html
-let s:cpo_save=&cpo
-set cpo&vim
-cnoremap <buffer> <expr> <C-R><C-G> fugitive#buffer().rev()
-cnoremap <buffer> <expr>  fugitive#buffer().rev()
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
-setlocal noautoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=
-setlocal commentstring=
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal cursorlineopt=both
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'json'
-setlocal filetype=json
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=cq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=GetJSONIndent(v:lnum)
-setlocal indentkeys=0{,0},0),0[,0],!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal nomacmeta
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=-1
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal showbreak=
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=0
-set spell
-setlocal spell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal spelloptions=
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'json'
-setlocal syntax=json
-endif
-setlocal tabstop=2
-setlocal tagcase=
-setlocal tagfunc=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal wincolor=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 9 - ((8 * winheight(0) + 30) / 60)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 9
-normal! 015|
-tabnext 4
+keepjumps 129
+normal! 036|
+tabnext 3
 set stal=1
-badd +84 src/html/volunteer-home.html
+badd +1 src/html/volunteer-profile.html
 badd +1 src/scss/besa/_elements.scss
-badd +3 src/html/modules/attendee-loop.html
-badd +20 src/html/attendees.json
-badd +15 src/html/modules/available-event.html
-badd +0 public/volunteer-home.html
-badd +0 src/scss/besa/besa.scss
+badd +1 src/scss/besa/_controls.scss
 badd +0 src/scss/besa/_community.scss
-badd +1 src/html/modules/goal-meter.html
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
