@@ -16,7 +16,7 @@ set guioptions-=r                 " Don't show right scrollbar
 
 set directory=~/.vimswap
 
-let NERDTreeMapOpenInTab='<ENTER>'
+:aunmenu File.Print
 
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],

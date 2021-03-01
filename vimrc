@@ -67,7 +67,6 @@ map <leader>tm :tabmove
 map <leader>. :NERDTreeToggle<CR>
 map <leader>p :CtrlP<CR>
 map <D-p> :CtrlP<CR>
-:aunmenu File.Print
 map <leader>sh :set syntax=html<cr>
 map <leader>rs :%s/\.  /. /g<cr>
 map <leader>n :bnext<cr>
