@@ -120,6 +120,6 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 
-let g:sessions_dir = "~/.vim/sessions"
+let g:session_dir = "~/.vim/sessions"
 exec 'nnoremap <Leader>ss :mksession! ' . g:session_dir . '/*.vim<C-D><BS><BS><BS><BS><BS>'
 exec 'nnoremap <Leader>sr :so ' . g:session_dir. '/*.vim<C-D><BS><BS><BS><BS><BS>'
