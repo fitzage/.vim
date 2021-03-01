@@ -88,6 +88,8 @@ nnoremap <leader><Down> <C-w>k
 nnoremap <leader><Up> <C-w>j
 nnoremap <leader><Right> <C-w>l
 
+nnoremap <leader>s :ToggleWorkspace<CR>
+
 " Uncomment to use Jamis Buck's file opening plugin
 " map <Leader>t :FuzzyFinderTextMate<Enter>
 
@@ -117,3 +119,4 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
+
