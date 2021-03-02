@@ -17,6 +17,7 @@ set guioptions-=r                 " Don't show right scrollbar
 set directory=~/.vimswap
 
 :aunmenu File.Print
+:aunmenu Tools.Make
 
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
