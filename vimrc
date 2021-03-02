@@ -65,8 +65,7 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 map <leader>. :NERDTreeToggle<CR>
-map <leader>p :CtrlP<CR>
-map <D-p> :CtrlP<CR>
+map <leader>p :Files<CR>
 map <leader>sh :set syntax=html<cr>
 map <leader>rs :%s/\.  /. /g<cr>
 map <leader>n :bnext<cr>
@@ -123,3 +122,6 @@ let g:ctrlp_custom_ignore = {
 let g:session_dir = "~/.vim/sessions"
 exec 'nnoremap <Leader>ss :mksession! ' . g:session_dir . '/*.vim<C-D><BS><BS><BS><BS><BS>'
 exec 'nnoremap <Leader>sr :so ' . g:session_dir. '/*.vim<C-D><BS><BS><BS><BS><BS>'
+
+set rtp+=/usr/local/bin/fzf
+
