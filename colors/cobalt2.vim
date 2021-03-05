@@ -238,16 +238,10 @@ fun! s:X(group, fg, bg, attr, lcfg, lcbg)
     endif
   endif
 
-  if a:attr == ""
-    exec "hi ".a:group." gui=none cterm=none"
-  else
-    let l:noitalic = join(filter(split(a:attr, ","), "v:val !=? 'italic'"), ",")
-    if empty(l:noitalic)
-      let l:noitalic = "none"
-    endif
-    exec "hi ".a:group." gui=".a:attr." cterm=".l:noitalic
-  endif
 endfun
+
+highlight Comment cterm=italic gui=italic
+highlight htmlArg cterm=italic gui=italic
 
 if !exists("g:cobalt_bg")
   let g:cobalt_bg = "193549"                                            "#193549

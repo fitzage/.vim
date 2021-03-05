@@ -10,7 +10,6 @@ set lines=80 columns=165          " Window dimensions.
 
 syntax enable
 set background=dark
-colorscheme cobalt2
 
 set guioptions-=r                 " Don't show right scrollbar
 

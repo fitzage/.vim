@@ -1,10 +1,10 @@
 " Example Vim configuration.
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
 
+syntax on
 set nocompatible                  " Must come first because it changes other options.
 silent! call pathogen#runtime_append_all_bundles()
 
-syntax on
 filetype plugin indent on         " Turn on file type detection.
 
 runtime macros/matchit.vim        " Load the matchit plugin.
@@ -65,7 +65,7 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 map <leader>. :NERDTreeToggle<CR>
-map <leader>p :Files<CR>
+map <leader>p :GFiles<CR>
 map <leader>b :Buffers<CR>
 map <leader>sh :set syntax=html<cr>
 map <leader>rs :%s/\.  /. /g<cr>
@@ -87,8 +87,6 @@ nnoremap <leader><Down> <C-w>k
 nnoremap <leader><Up> <C-w>j
 nnoremap <leader><Right> <C-w>l
 
-nnoremap <leader>s :ToggleWorkspace<CR>
-
 " Uncomment to use Jamis Buck's file opening plugin
 " map <Leader>t :FuzzyFinderTextMate<Enter>
 
@@ -106,23 +104,9 @@ nnoremap ; :
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 
-syntax enable
 colorscheme cobalt2
 hi Normal guibg=NONE ctermbg=NONE
 
-highlight Comment cterm=italic gui=italic
-
-" Ignore some folders and files for CtrlP indexing
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-  \ }
-
-
-let g:session_dir = "~/.vim/sessions"
-exec 'nnoremap <Leader>ss :mksession! ' . g:session_dir . '/*.vim<C-D><BS><BS><BS><BS><BS>'
-exec 'nnoremap <Leader>sr :so ' . g:session_dir. '/*.vim<C-D><BS><BS><BS><BS><BS>'
-
 set rtp+=/usr/local/bin/fzf
 
-highlight htmlArg cterm=italic gui=italic
+let g:ackprg = 'ag --nogroup --nocolor --column'

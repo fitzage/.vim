@@ -19,5 +19,7 @@ if exists("syntax_on")
 endif
 
 let colors_name = "default"
+highlight Comment cterm=italic gui=italic
+highlight htmlArg cterm=italic gui=italic
 
 " vim: sw=2
