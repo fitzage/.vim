@@ -28,3 +28,6 @@
 [submodule "bundle/fzf.vim"]
 	path = bundle/fzf.vim
 	url = git@github.com:junegunn/fzf.vim.git
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = https://github.com/dense-analysis/ale.git
