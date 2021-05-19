@@ -31,3 +31,15 @@
 [submodule "bundle/ale"]
 	path = bundle/ale
 	url = https://github.com/dense-analysis/ale.git
+[submodule "/Users/fitzage/.vim/bundle/lightline.vim"]
+	path = /Users/fitzage/.vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "bundle/lexima"]
+	path = bundle/lexima
+	url = https://github.com/cohama/lexima.vim.git
