@@ -31,8 +31,8 @@
 [submodule "bundle/ale"]
 	path = bundle/ale
 	url = https://github.com/dense-analysis/ale.git
-[submodule "/Users/fitzage/.vim/bundle/lightline.vim"]
-	path = /Users/fitzage/.vim/bundle/lightline.vim
+[submodule "bundle/lightline.vim"]
+	path = bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
