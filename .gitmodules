@@ -16,9 +16,6 @@
 [submodule "bundle/vim-prettier"]
 	path = bundle/vim-prettier
 	url = https://github.com/prettier/vim-prettier
-[submodule "bundle/indentLine"]
-	path = bundle/indentLine
-	url = git@github.com:Yggdroot/indentLine.git
 [submodule "bundle/vim-plugin-autosess"]
 	path = bundle/vim-plugin-autosess
 	url = git@github.com:powerman/vim-plugin-autosess.git
