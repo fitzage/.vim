@@ -258,6 +258,9 @@ let g:lighter_grey = "BCBCBC"                                          " #BCBCBC
 let g:lightest_grey = "CCCCCC"                                         " #CCCCCC
 let g:white = "FFFFFF"                                                 " #FFFFFF
 
+let g:odd = "162f41"
+let g:even = "142b3b"
+
 let g:dark_orange = "FF9A00"                                           " #FF9A00
 let g:light_orange = "FF9D00"                                          " #FF9D00
 let g:yellow = "FFC600"                                                " #FFC600
@@ -646,8 +649,8 @@ call s:X("DbgBreakPt","",g:aubergine,"","","DarkMagenta")
 if !exists("g:indent_guides_auto_colors")
   let g:indent_guides_auto_colors = 0
 endif
-call s:X("IndentGuidesOdd","",g:darkest_grey,"","","")
-call s:X("IndentGuidesEven","",g:black,"","","")
+call s:X("IndentGuidesOdd","",g:odd,"","","")
+call s:X("IndentGuidesEven","",g:even,"","","")
 
 " Plugins, etc.
 

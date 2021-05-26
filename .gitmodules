@@ -40,3 +40,6 @@
 [submodule "bundle/lexima"]
 	path = bundle/lexima
 	url = https://github.com/cohama/lexima.vim.git
+[submodule "bundle/vim-indent-guides"]
+	path = bundle/vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git

@@ -125,3 +125,4 @@ let g:ale_linters = {'vue': ['eslint', 'vls']}
 let g:ale_fixers = {'javascript': ['prettier', 'eslint'], 'vue': ['prettier', 'eslint']}
 
 let g:ale_fix_on_save = 1
+let g:indent_guides_enable_on_vim_startup = 1
