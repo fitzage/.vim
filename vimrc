@@ -64,6 +64,7 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 map <leader>. :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
 map <leader>p :GFiles<CR>
 map <leader>b :Buffers<CR>
 map <leader>sh :set syntax=html<cr>
